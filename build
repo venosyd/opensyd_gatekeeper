@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# 
+mvn -T 1.5C clean install -Dmaven.test.skip=true
+cd target/
+mvn install:install-file -Dfile=opensyd-gatekeeper-3.0.0.jar -DgroupId=com.venosyd.open -DartifactId=opensyd-gatekeeper -Dversion=3.0.0 -Dpackaging=jar
